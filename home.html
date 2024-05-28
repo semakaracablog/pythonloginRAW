@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h2>Home</h2>
+    {% if 'username' in session %}
+        <p>Logged in as {{ session['username'] }}. <a href="/logout">Logout</a></p>
+    {% else %}
+        <p>You are not logged in. <a href="/login">Login</a> or <a href="/register">Register</a></p>
+    {% endif %}
+</body>
+</html>
